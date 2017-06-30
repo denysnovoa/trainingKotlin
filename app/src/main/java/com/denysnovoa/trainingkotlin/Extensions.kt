@@ -2,7 +2,10 @@
 
 package com.denysnovoa.trainingkotlin
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,3 +25,16 @@ fun ImageView.loadUrl(url: String) {
 fun ViewGroup.inflate(resource: Int): View {
   return LayoutInflater.from(context).inflate(resource, this, false)
 }
+
+inline fun <reified T : Activity> Context.startActivity() {
+  val intent = Intent(this, T::class.java)
+}
+
+fun <T : View> View.find(id: Int): T {
+  return findViewById(id)
+}
+
+fun RecyclerView.ViewHolder.find(id: Int) {
+  find(id)
+}
+
