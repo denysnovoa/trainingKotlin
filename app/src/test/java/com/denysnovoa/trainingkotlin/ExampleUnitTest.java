@@ -1,4 +1,4 @@
-package com.denysnovoa.trainingkotlinaleyva;
+package com.denysnovoa.trainingkotlin;
 
 import org.junit.Test;
 

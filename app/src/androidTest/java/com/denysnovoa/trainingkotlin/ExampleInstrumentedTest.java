@@ -1,4 +1,4 @@
-package com.denysnovoa.trainingkotlinaleyva;
+package com.denysnovoa.trainingkotlin;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     // Context of the app under test.
     Context appContext = InstrumentationRegistry.getTargetContext();
 
-    assertEquals("com.denysnovoa.trainingkotlinaleyva", appContext.getPackageName());
+    assertEquals("com.denysnovoa.trainingkotlin", appContext.getPackageName());
   }
 }
