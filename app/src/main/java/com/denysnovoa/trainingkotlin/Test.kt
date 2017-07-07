@@ -1,5 +1,6 @@
 package com.denysnovoa.trainingkotlin
 
+import android.view.View
 import kotlin.properties.Delegates
 
 class Test() {
@@ -28,5 +29,20 @@ class Test() {
   }
 }
 
-
 infix fun Int.suma(other: Int) = this + other
+
+
+sealed class Op {
+  object Show : Op()
+  object Hide : Op()
+  class TranslateX(val translation: Int) : Op()
+  class TranslateY(val translation: Int) : Op()
+}
+
+fun runOp(op: Op, view: View) = when (op) {
+  Op.Show -> view.visible(true)
+  Op.Hide -> view.visible(false)
+  is Op.TranslateX ->
+    view.translationX = op.translation.toFloat()
+  is Op.TranslateY -> view.translationY = op.translation.toFloat()
+}

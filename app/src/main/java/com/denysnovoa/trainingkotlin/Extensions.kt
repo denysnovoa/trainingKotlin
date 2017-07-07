@@ -38,3 +38,6 @@ fun RecyclerView.ViewHolder.find(id: Int) {
   find(id)
 }
 
+fun View.visible(visible: Boolean) {
+  this.visibility = if (visible) View.VISIBLE else View.GONE
+}
