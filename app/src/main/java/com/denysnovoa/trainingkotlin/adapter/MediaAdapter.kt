@@ -12,7 +12,7 @@ import com.denysnovoa.trainingkotlin.loadUrl
 import kotlinx.android.synthetic.main.view_media_item.view.*
 import kotlin.properties.Delegates
 
-class MediaAdapter(items: List<MediaItem>, val listenerClick: (MediaItem) -> Unit) : RecyclerView.Adapter<MediaViewHolder>() {
+class MediaAdapter(items: List<MediaItem> = emptyList(), val listenerClick: (MediaItem) -> Unit) : RecyclerView.Adapter<MediaViewHolder>() {
 
   var items: List<MediaItem> by Delegates.observable(items) { _, _, _ ->
     this.notifyDataSetChanged()

@@ -17,4 +17,16 @@ class Test() {
 
   val result2 = list2.filter { it % 2 == 0 }
 
+  fun test() {
+    for (i in 1 until 10 step 2) {
+
+    }
+
+    val result = 3 suma 4
+    val pair = Pair(3, "sr")
+    val pair2 = 3 to "st"
+  }
 }
+
+
+infix fun Int.suma(other: Int) = this + other
