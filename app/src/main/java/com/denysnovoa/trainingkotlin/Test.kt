@@ -13,4 +13,8 @@ class Test() {
   val list2 = listOf(2, 3, 4)
   val newList = list2 + 5
 
+  val result = list2.filterIndexed { index, i -> i % 2 == 0 }
+
+  val result2 = list2.filter { it % 2 == 0 }
+
 }
