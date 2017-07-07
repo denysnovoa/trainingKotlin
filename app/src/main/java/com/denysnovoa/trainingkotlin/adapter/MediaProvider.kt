@@ -14,7 +14,7 @@ object MediaProvider {
     return (1..30).map {
       val isVideo = it % 3 == 0
 
-      MediaItem("Tittle$it", "$thumbBase$it", if (isVideo) MediaItem.Type.VIDEO else MediaItem.Type.PHOTO)
+      MediaItem(it, "Tittle$it", "$thumbBase$it", if (isVideo) MediaItem.Type.VIDEO else MediaItem.Type.PHOTO)
     }
   }
 
